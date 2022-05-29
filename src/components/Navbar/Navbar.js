@@ -9,6 +9,7 @@ import { FaUser, FaFolderOpen } from 'react-icons/fa';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CloseIcon from '@material-ui/icons/Close';
+import { GiGraduateCap,GiEarthAmerica ,GiSkills} from "react-icons/gi"
 
 import './Navbar.css';
 import { headerData } from '../../data/headerData';
@@ -211,7 +212,55 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
+                        {/* <Fade left>
+                            <NavLink
+                                to='/#education'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <GiGraduateCap className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        Education
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade> */}
+
+                         {/* <Fade left>
+                            <NavLink
+                                to='/#skills'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <GiSkills className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        Skills
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade> */}
+
                         <Fade left>
+                            <NavLink
+                                to='/#projects'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <GiEarthAmerica className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        Projects
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                        {/* <Fade left>
                             <NavLink
                                 to='/#resume'
                                 smooth={true}
@@ -227,9 +276,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        </Fade> */}
 
-                        <Fade left>
+                        {/* <Fade left>
                             <NavLink
                                 to='/#services'
                                 smooth={true}
@@ -245,9 +294,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        </Fade> */}
 
-                        <Fade left>
+                        {/* <Fade left>
                             <NavLink
                                 to='/#blog'
                                 smooth={true}
@@ -263,7 +312,7 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        </Fade> */}
 
                         <Fade left>
                             <NavLink
