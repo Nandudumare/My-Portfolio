@@ -17,7 +17,13 @@ import todo from "../assets/Projects_image/todo.png"
 export const projectsData = [{
         id: 1,
         projectName: 'AppleTv.com Clone',
-        projectDesc: "An AppleTV.com is an OTT Website. You can watch latest movie and Web series on this website .",
+        projectDesc: `An AppleTV.com is an OTT Website. You can watch latest movie and Web series on this website . 
+        Features : 
+        User Authentication ,
+        User Details Management ,
+        Series & Shows Gallery ,
+        Shown Carousels ,
+        Shown Details.`,
         tags: ['HTML', 'CSS', 'JAVASCRIPT'],
         code: 'https://github.com/Nandudumare/Apple-TV-Clone-Project.github.io',
         demo: 'https://nameh-dhiman.github.io/Apple-TV-Clone-Project.github.io/',
@@ -26,7 +32,11 @@ export const projectsData = [{
     {
         id: 2,
         projectName: 'Ebay.com Clone',
-        projectDesc: 'eBay.com is an international e-commerce website where you can buy and sell your products .',
+        projectDesc: `eBay.com is an international e-commerce website where you can buy and sell your products. Features : User Authentication,
+        Product adding to cart, and deleting from Cart,
+        Different Page Related to Brand,
+        Payment Options,
+        Sorting, Filtering, and Searching.`,
         tags: ['HTML', 'CSS', 'JAVASCRIPT'],
         code: 'https://github.com/Nandudumare/Ebay-Website-Clone',
         demo: 'https://genuine-pika-880b46.netlify.app/',
@@ -35,7 +45,14 @@ export const projectsData = [{
     {
         id: 3,
         projectName: 'Nordstromrack.com Clone',
-        projectDesc: 'Nordstromrack is an international e-commerce website .',
+        projectDesc: `Nordstromrack is an international e-commerce website.
+        Features : Authentication,
+        User Details Management,
+        Series & Shows Gallery,
+        Show Carousels,
+        Product adding to cart, and deleting from Cart,
+        Payment Option,
+        Sorting and Searching.`,
         tags: ['REACT JS', 'REDUX', 'BOOTSTRAP'],
         code: 'https://github.com/Nandudumare/Nordstromrack-Website-Clone',
         demo: 'https://precious-lokum-c13ef5.netlify.app/',
