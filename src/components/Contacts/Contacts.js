@@ -140,16 +140,16 @@ function Contacts() {
                     message: message,
                 };
 
-                // axios.post(contactsData.sheetAPI, responseData).then((res) => {
-                //     console.log('success');
-                //     setSuccess(true);
-                //     setErrMsg('');
+                axios.post(contactsData.sheetAPI, responseData).then((res) => {
+                    console.log('success');
+                    setSuccess(true);
+                    setErrMsg('');
 
-                //     setName('');
-                //     setEmail('');
-                //     setMessage('');
-                //     setOpen(false);
-                // });
+                    setName('');
+                    setEmail('');
+                    setMessage('');
+                    setOpen(false);
+                });
             } else {
                 setErrMsg('Invalid email');
                 setOpen(true);
