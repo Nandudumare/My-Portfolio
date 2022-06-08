@@ -119,7 +119,7 @@ function Contacts() {
             backgroundColor: theme.primary,
             color: theme.secondary,
             transition: '250ms ease-in-out',
-            '&:hover': {
+            '&:active': {
                 transform: 'scale(1.08)',
                 color: theme.secondary,
                 backgroundColor: theme.tertiary,
