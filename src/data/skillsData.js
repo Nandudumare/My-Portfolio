@@ -1,29 +1,31 @@
- export const skillsData = [
-     'HTML',
-     //  'Fastify',
-     //  'Blender',
-     //  'Figma',
+export const skillsData = [
+  "HTML",
+  //  'Fastify',
+  //  'Blender',
+  //  'Figma',
 
-     'CSS',
-     'Javascript',
-     'Typescript',
-     'React JS',
-     'MongoDB',
-     //  'Django',
-     'Node JS',
-     'Express JS',
-     'Canva',
-     'Bootstrap',
-     //  'MaterialUI'
- ]
+  "CSS",
+  "Javascript",
+  "Typescript",
+  "React JS",
+  "Redux JS",
+  //   "Next JS",
+  "MongoDB",
+  //  'Django',
+  "Node JS",
+  "Express JS",
+  "Canva",
+  "Bootstrap",
+  "MaterialUI",
+  "Git",
+];
 
- // Choose your skills from below. Make sure it's in the same format and spelled correctly.
- // Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
+// Choose your skills from below. Make sure it's in the same format and spelled correctly.
+// Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
 
+// AVAILABLE SKILLS
 
- // AVAILABLE SKILLS
-
- /* 
+/* 
      HTML
      CSS
      JS 
