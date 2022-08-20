@@ -99,15 +99,28 @@ export const projectsData = [
     demo: "https://modesense.netlify.app/",
     image: modesense,
   },
-  // {
-  //     id: 8,
-  //     projectName: 'Car Pooling System',
-  //     projectDesc: 'The carpooling system merges multiple people in a car which leads to meet new people, reduces pollution',
-  //     tags: ['Flutter', 'React'],
-  //     code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-  //     demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-  //     image: eight
-  // },
+  {
+    id: 8,
+    projectName: "Mern Chat App",
+    projectDesc:
+      "Chat Application is a Full Stack Chatting App. Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.",
+    tags: ["React Js", "Node Js", "Express JS", "Mongo DB"],
+    code: "https://github.com/Nandudumare/MERN-CHAT-APP",
+    demo: "https://mern-chat-app-kappa.vercel.app/",
+    image:
+      "https://user-images.githubusercontent.com/97354079/179386108-31f651f8-29de-4a16-8793-dc33276fae19.png",
+  },
+  {
+    id: 9,
+    projectName: "PharmEasy.in Clone",
+    projectDesc:
+      "PharmEasy is one of online pharmacy & medical stores offering pharmaceutical and healthcare products.",
+    tags: ["React Js", "Node Js", "Express JS", "Mongo DB"],
+    code: "https://github.com/Nandudumare/vogue-pocket-8479",
+    demo: "https://pharmeasylion.vercel.app/",
+    image:
+      "http://res.cloudinary.com/dvakewn1g/image/upload/v1660994488/nabvj4n0sklxev3fdhal.png",
+  },
 ];
 
 // Do not remove any fields.
