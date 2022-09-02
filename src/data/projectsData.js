@@ -86,7 +86,7 @@ export const projectsData = [
       "This is the Todo-App where you can SignIn, LogIn and LogOut,you can add Todo , remove todo ,toggle todo as completed or not completed and you can also delete the Todo .",
     tags: ["REACT JS", "TYPESCRIPT"],
     code: "https://github.com/Nandudumare/Todo-App-Mern-Stack",
-    demo: "todo-chi-silk.vercel.app/",
+    demo: "https://todo-chi-silk.vercel.app/",
     image: todo,
   },
   {
