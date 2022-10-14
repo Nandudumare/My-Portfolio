@@ -71,13 +71,13 @@ export const projectsData = [
   },
   {
     id: 5,
-    projectName: "Movie App",
+    projectName: "Movie Store",
     projectDesc:
-      "This is the Movie App where you can search a movie name and you will get the information about it and it has one trending page where you can watch trending movies information .",
-    tags: ["HTML", "CSS", "JAVASCRIPT"],
-    code: "https://github.com/Nandudumare/Movie-App",
-    demo: "https://nostalgic-mccarthy-ccba61.netlify.app/",
-    image: movie,
+      "Movie Store is app which enables you to read Details about particular movies or series.",
+    tags: ["REACT", "MUI", "GIT"],
+    code: "https://github.com/Nandudumare/movie-store",
+    demo: "https://movie-store-psi.vercel.app/",
+    image: "https://user-images.githubusercontent.com/97354079/193997381-b54e19ac-a6ac-4f1a-8e29-da419296c619.png",
   },
   {
     id: 6,
