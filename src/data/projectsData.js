@@ -77,7 +77,8 @@ export const projectsData = [
     tags: ["REACT", "MUI", "GIT"],
     code: "https://github.com/Nandudumare/movie-store",
     demo: "https://movie-store-psi.vercel.app/",
-    image: "https://user-images.githubusercontent.com/97354079/193997381-b54e19ac-a6ac-4f1a-8e29-da419296c619.png",
+    image:
+      "https://user-images.githubusercontent.com/97354079/193997381-b54e19ac-a6ac-4f1a-8e29-da419296c619.png",
   },
   {
     id: 6,
@@ -86,7 +87,7 @@ export const projectsData = [
       "This is the Todo-App where you can SignIn, LogIn and LogOut,you can add Todo , remove todo ,toggle todo as completed or not completed and you can also delete the Todo .",
     tags: ["REACT JS", "TYPESCRIPT"],
     code: "https://github.com/Nandudumare/Todo-App-Mern-Stack",
-    demo: "https://todo-chi-silk.vercel.app/",
+    demo: "https://todo-application-beta.vercel.app/",
     image: todo,
   },
   {
@@ -117,7 +118,7 @@ export const projectsData = [
       "PharmEasy is one of online pharmacy & medical stores offering pharmaceutical and healthcare products.",
     tags: ["React Js", "Node Js", "Express JS", "Mongo DB"],
     code: "https://github.com/Nandudumare/vogue-pocket-8479",
-    demo: "https://pharmeasylion.vercel.app/",
+    demo: "https://pharmeasy-dun.vercel.app/",
     image:
       "http://res.cloudinary.com/dvakewn1g/image/upload/v1660994488/nabvj4n0sklxev3fdhal.png",
   },
