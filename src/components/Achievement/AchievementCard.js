@@ -21,7 +21,7 @@ function AchievementCard({id, title, details, date, field, image}) {
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles(() => ({
+    const useStyles = makeStyles((muiTheme) => ({
         achievementCard : {
             backgroundColor:theme.primary30,
             "&:hover": {

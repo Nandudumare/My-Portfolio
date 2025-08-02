@@ -20,7 +20,7 @@ import {
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
 
-  const useStyles = makeStyles(() => ({
+  const useStyles = makeStyles((muiTheme) => ({
     resumeBtn: {
       color: theme.primary,
       borderRadius: "30px",
@@ -38,7 +38,7 @@ function Landing() {
         color: theme.secondary,
         border: `3px solid ${theme.tertiary}`,
       },
-      "@media (max-width: 600px)": {
+      [muiTheme.breakpoints.down("sm")]: {
         width: "180px",
       },
     },
@@ -60,7 +60,7 @@ function Landing() {
         color: theme.tertiary,
         border: `3px solid ${theme.tertiary}`,
       },
-      "@media (max-width: 600px)": {
+      [muiTheme.breakpoints.down("sm")]: {
         display: "none",
       },
     },

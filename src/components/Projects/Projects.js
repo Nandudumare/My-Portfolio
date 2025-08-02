@@ -15,7 +15,7 @@ function Projects() {
     const { theme } = useContext(ThemeContext);
 
     
-    const useStyles = makeStyles(() => ({
+    const useStyles = makeStyles((muiTheme) => ({
         viewAllBtn : {
             color: theme.tertiary, 
             backgroundColor: theme.primary,

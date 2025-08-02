@@ -29,7 +29,7 @@ function BackToTop() {
 
     window.addEventListener('scroll', toggleVisible);
 
-    const useStyles = makeStyles(() => ({
+    const useStyles = makeStyles((muiTheme) => ({
         icon: {
             fontSize: '3rem',
             color: theme.tertiary,

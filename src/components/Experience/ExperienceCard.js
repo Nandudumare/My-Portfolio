@@ -22,7 +22,7 @@ function ExperienceCard({id, company, jobtitle, startYear, endYear}) {
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles(() => ({
+    const useStyles = makeStyles((muiTheme) => ({
         experienceCard : {
             backgroundColor:theme.primary30,
             "&:hover": {

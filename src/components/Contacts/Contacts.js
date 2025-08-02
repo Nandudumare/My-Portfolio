@@ -48,7 +48,7 @@ function Contacts() {
     setOpen(false);
   };
 
-  const useStyles = makeStyles(() => ({
+  const useStyles = makeStyles((muiTheme) => ({
     input: {
       border: `4px solid ${theme.primary80}`,
       backgroundColor: `${theme.secondary}`,

@@ -23,7 +23,7 @@ function BlogPage() {
     })
 
 
-    const useStyles = makeStyles(() => ({
+    const useStyles = makeStyles((muiTheme) => ({
         search : {
             color: theme.tertiary, 
             width: '40%',
@@ -40,7 +40,7 @@ function BlogPage() {
             "&::placeholder": {
                 color: theme.tertiary80, 
             },
-            "@media (max-width: 600px)": {
+            [muiTheme.breakpoints.down('sm')]: {
                 width:'350px',
             },
         },
@@ -61,7 +61,7 @@ function BlogPage() {
                 color: theme.tertiary,
                 transform: 'scale(1.1)',
             },
-            "@media (max-width: 600px)": {
+            [muiTheme.breakpoints.down('sm')]: {
                 fontSize: '1.8rem',
             },
         },

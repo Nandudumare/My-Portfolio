@@ -16,7 +16,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
         });
     }, []);
 
-    const useStyles = makeStyles(() => ({
+    const useStyles = makeStyles((muiTheme) => ({
         iconBtn: {
             display: 'flex',
             alignItems: 'center',

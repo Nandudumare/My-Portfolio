@@ -22,7 +22,7 @@ function ProjectPage() {
         return content.toLowerCase().includes(search.toLowerCase())
     })
 
-    const useStyles = makeStyles(() => ({
+    const useStyles = makeStyles((muiTheme) => ({
         search : {
             color: theme.tertiary, 
             width: '40%',
@@ -36,10 +36,10 @@ function ProjectPage() {
             fontSize: '0.9rem',  
             backgroundColor: theme.secondary, 
             boxShadow: theme.type === 'dark' ? 'inset 3px 3px 6px #ffffff10, inset -3px -3px 6px #00000060' : 'inset 3px 3px 6px #ffffffbd, inset -3px -3px 6px #00000030',
-            "&:placeholder": {
+            "&::placeholder": {
                 color: theme.tertiary80, 
             },
-            "@media (max-width: 600px)": {
+            [muiTheme.breakpoints.down('sm')]: {
                 width:'350px',
             },
         },
@@ -60,7 +60,7 @@ function ProjectPage() {
                 color: theme.tertiary,
                 transform: 'scale(1.1)',
             },
-            "@media (max-width: 600px)": {
+            [muiTheme.breakpoints.down('sm')]: {
                 fontSize: '1.8rem',
             },
         },
