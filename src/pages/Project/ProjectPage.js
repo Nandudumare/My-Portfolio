@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { Grid } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { styled } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import { AiOutlineHome } from "react-icons/ai";
 
 import './ProjectPage.css'

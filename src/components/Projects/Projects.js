@@ -1,6 +1,7 @@
 import React,{ useContext} from 'react';
 import { Link } from 'react-router-dom'
 import { styled } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'

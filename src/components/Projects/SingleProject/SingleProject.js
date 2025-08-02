@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { styled } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import { FaPlay, FaCode } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

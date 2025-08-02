@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 import isEmail from "validator/lib/isEmail";
 import { styled } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import {
   FaTwitter,
   FaLinkedinIn,

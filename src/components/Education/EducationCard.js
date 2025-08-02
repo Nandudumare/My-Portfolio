@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { styled } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
