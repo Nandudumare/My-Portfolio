@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Fade from 'react-reveal/Fade';
+import React, { useEffect, useContext } from 'react';
+import { styled } from '@mui/material/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 
@@ -9,6 +10,13 @@ import { AiOutlineFolder } from "react-icons/ai";
 import './Achievement.css'
 
 function AchievementCard({id, title, details, date, field, image}) {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
+
 
     const { theme } = useContext(ThemeContext);
 
@@ -23,7 +31,7 @@ function AchievementCard({id, title, details, date, field, image}) {
 
     const classes = useStyles();
     return (
-        <Fade bottom>
+        <div data-aos="fade-up">
            <div key={id} className={`achievement-card ${classes.achievementCard}`}>
                <div className="achievecard-content">
                     <div className="achievecard-details1">
@@ -42,7 +50,7 @@ function AchievementCard({id, title, details, date, field, image}) {
                     <img src={image} alt="" />
                 </div>
            </div>
-        </Fade>
+        </div>
         
     )
 }

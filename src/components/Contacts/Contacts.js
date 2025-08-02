@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import { Snackbar, IconButton, SnackbarContent } from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
+import { Snackbar, IconButton, SnackbarContent } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 import isEmail from "validator/lib/isEmail";
-import { makeStyles } from "@material-ui/core/styles";
+import { styled } from '@mui/material/styles';
 import {
   FaTwitter,
   FaLinkedinIn,
@@ -177,7 +177,7 @@ function Contacts() {
           <div className="contacts-form">
             <form onSubmit={handleContactForm}>
               <div className="input-container">
-                <label htmlFor="Name" className={classes.label}>
+                <label htmlFor="Name" style={{}}>
                   Name
                 </label>
                 <input
@@ -190,7 +190,7 @@ function Contacts() {
                 />
               </div>
               <div className="input-container">
-                <label htmlFor="Email" className={classes.label}>
+                <label htmlFor="Email" style={{}}>
                   Email
                 </label>
                 <input
@@ -203,7 +203,7 @@ function Contacts() {
                 />
               </div>
               <div className="input-container">
-                <label htmlFor="Message" className={classes.label}>
+                <label htmlFor="Message" style={{}}>
                   Message
                 </label>
                 <textarea
@@ -217,7 +217,7 @@ function Contacts() {
               </div>
 
               <div className="submit-btn">
-                <button type="submit" className={classes.submitBtn}>
+                <button type="submit" style={{}}>
                   <p>{!success ? "Send" : "Sent"}</p>
                   <div className="submit-icon">
                     <AiOutlineSend
@@ -277,19 +277,19 @@ function Contacts() {
               href={`mailto:${contactsData.email}`}
               className="personal-details"
             >
-              <div className={classes.detailsIcon}>
+              <div style={{}}>
                 <FiAtSign />
               </div>
               <p style={{ color: theme.tertiary }}>{contactsData.email}</p>
             </a>
             <a href={`tel:${contactsData.phone}`} className="personal-details">
-              <div className={classes.detailsIcon}>
+              <div style={{}}>
                 <FiPhone />
               </div>
               <p style={{ color: theme.tertiary }}>{contactsData.phone}</p>
             </a>
             <div className="personal-details">
-              <div className={classes.detailsIcon}>
+              <div style={{}}>
                 <HiOutlineLocationMarker />
               </div>
               <p style={{ color: theme.tertiary }}>{contactsData.address}</p>
@@ -301,7 +301,7 @@ function Contacts() {
                   href={socialsData.twitter}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaTwitter aria-label="Twitter" />
                 </a>
@@ -311,7 +311,7 @@ function Contacts() {
                   href={socialsData.github}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaGithub aria-label="GitHub" />
                 </a>
@@ -321,7 +321,7 @@ function Contacts() {
                   href={socialsData.linkedIn}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaLinkedinIn aria-label="LinkedIn" />
                 </a>
@@ -331,7 +331,7 @@ function Contacts() {
                   href={socialsData.instagram}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaInstagram aria-label="Instagram" />
                 </a>
@@ -341,7 +341,7 @@ function Contacts() {
                   href={socialsData.medium}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaMediumM aria-label="Medium" />
                 </a>
@@ -351,7 +351,7 @@ function Contacts() {
                   href={socialsData.blogger}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaBloggerB aria-label="Blogger" />
                 </a>
@@ -361,7 +361,7 @@ function Contacts() {
                   href={socialsData.youtube}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaYoutube aria-label="YouTube" />
                 </a>
@@ -371,7 +371,7 @@ function Contacts() {
                   href={socialsData.reddit}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaRedditAlien aria-label="Reddit" />
                 </a>
@@ -381,7 +381,7 @@ function Contacts() {
                   href={socialsData.stackOverflow}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaStackOverflow aria-label="Stack Overflow" />
                 </a>
@@ -391,7 +391,7 @@ function Contacts() {
                   href={socialsData.codepen}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaCodepen aria-label="CodePen" />
                 </a>
@@ -401,7 +401,7 @@ function Contacts() {
                   href={socialsData.gitlab}
                   target="_blank"
                   rel="noreferrer"
-                  className={classes.socialIcon}
+                  style={{}}
                 >
                   <FaGitlab aria-label="GitLab" />
                 </a>

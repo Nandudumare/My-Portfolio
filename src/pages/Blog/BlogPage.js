@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { Grid } from '@material-ui/core'
+import { Grid } from '@mui/material'
 import { Link } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 import { AiOutlineHome } from "react-icons/ai";
 
 import './BlogPage.css'
@@ -75,13 +75,13 @@ function BlogPage() {
             </Helmet>
             <div className="blogPage--header" style={{backgroundColor: theme.primary}}>
                 <Link to="/">
-                    <AiOutlineHome className={classes.home}/>
+                    <AiOutlineHome style={{}}/>
                 </Link>
                 <h1 style={{color: theme.secondary}}>Blogs</h1>
             </div>
             <div className="blogPage--container">
                 <div className="blog--search">
-                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Seach blog..." className={classes.search}/>
+                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Seach blog..." style={{}}/>
                 </div>
                 <div className="blogs--container">
                     <Grid className="blog-grid" container direction="row" alignItems="center" justifyContent="center">

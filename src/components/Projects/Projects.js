@@ -1,6 +1,6 @@
 import React,{ useContext} from 'react';
 import { Link } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
@@ -70,9 +70,9 @@ function Projects() {
                         {projectsData.length > 3 && (
                             <div className="projects--viewAll">
                                 <Link to="/projects">
-                                    <button className={classes.viewAllBtn}>
+                                    <button style={{}}>
                                         View All
-                                        <HiArrowRight className={classes.viewArr} />
+                                        <HiArrowRight style={{}} />
                                     </button>
                                 </Link>
                             </div>

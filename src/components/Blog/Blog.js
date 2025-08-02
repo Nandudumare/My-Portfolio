@@ -1,6 +1,6 @@
 import React,{ useContext} from 'react';
 import { Link } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 import { HiArrowRight } from "react-icons/hi";
 
 import './Blog.css';
@@ -66,9 +66,9 @@ function Blog() {
                         {blogData.length > 3 && (
                             <div className="blog--viewAll">
                                 <Link to="/blog">
-                                    <button className={classes.viewAllBtn}>
+                                    <button style={{}}>
                                         View All
-                                        <HiArrowRight className={classes.viewArr} />
+                                        <HiArrowRight style={{}} />
                                     </button>
                                 </Link>
                             </div>

@@ -1,12 +1,20 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import { FaPlay, FaCode } from 'react-icons/fa';
-import Fade from 'react-reveal/Fade';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import placeholder from '../../../assets/png/placeholder.png';
 import './SingleProject.css';
 
 function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
+
     const useStyles = makeStyles((t) => ({
         iconBtn: {
             display: 'flex',
@@ -35,7 +43,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
     const classes = useStyles();
 
     return (
-        <Fade bottom>
+        <div data-aos="fade-up">
             <div
                 key={id}
                 className='singleProject'
@@ -54,7 +62,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                             href={demo}
                             target='_blank'
                             rel='noreferrer'
-                            className={classes.iconBtn}
+                            style={{}}
                             aria-labelledby={`${name
                                 .replace(' ', '-')
                                 .toLowerCase()} ${name
@@ -65,7 +73,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 id={`${name
                                     .replace(' ', '-')
                                     .toLowerCase()}-demo`}
-                                className={classes.icon}
+                                style={{}}
                                 aria-label='Demo'
                             />
                         </a>
@@ -73,7 +81,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                             href={code}
                             target='_blank'
                             rel='noreferrer'
-                            className={classes.iconBtn}
+                            style={{}}
                             aria-labelledby={`${name
                                 .replace(' ', '-')
                                 .toLowerCase()} ${name
@@ -84,7 +92,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 id={`${name
                                     .replace(' ', '-')
                                     .toLowerCase()}-code`}
-                                className={classes.icon}
+                                style={{}}
                                 aria-label='Code'
                             />
                         </a>
@@ -111,7 +119,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     ))}
                 </div>
             </div>
-        </Fade>
+        </div>
     );
 }
 

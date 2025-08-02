@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import {
   BrowserRouter as Router,
+  Routes,
   Route,
-  Switch,
-  Redirect,
+  Navigate,
 } from "react-router-dom";
 
 import { ThemeContext } from "./contexts/ThemeContext";
@@ -24,12 +24,12 @@ function App() {
     <div className="app">
       <Router>
         <ScrollToTop />
-        <Switch>
-          <Route path="/" exact component={Main} />
-          <Route path="/blog" exact component={BlogPage} />
-          <Route path="/projects" exact component={ProjectPage} />
-          <Redirect to="/" />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/projects" element={<ProjectPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </Router>
       <BackToTop />
     </div>
