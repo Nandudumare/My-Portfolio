@@ -19,6 +19,8 @@ import {
 
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
+  
+  console.log("Landing component rendering, theme:", theme);
 
   const useStyles = makeStyles((t) => ({
     resumeBtn: {
