@@ -5,8 +5,6 @@ import { Navbar, Footer, Landing, About, Skills, Testimonials, Blog, Education, 
 import { headerData } from '../../data/headerData'
 
 function Main() {
-    console.log("Main component rendering");
-    
     return (
         <div>
             <Helmet>

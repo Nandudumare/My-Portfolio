@@ -48,7 +48,7 @@ function Contacts() {
     setOpen(false);
   };
 
-  const useStyles = makeStyles((t) => ({
+  const useStyles = makeStyles(() => ({
     input: {
       border: `4px solid ${theme.primary80}`,
       backgroundColor: `${theme.secondary}`,

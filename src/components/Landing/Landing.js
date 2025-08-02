@@ -19,10 +19,8 @@ import {
 
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
-  
-  console.log("Landing component rendering, theme:", theme);
 
-  const useStyles = makeStyles((t) => ({
+  const useStyles = makeStyles(() => ({
     resumeBtn: {
       color: theme.primary,
       borderRadius: "30px",
@@ -40,7 +38,7 @@ function Landing() {
         color: theme.secondary,
         border: `3px solid ${theme.tertiary}`,
       },
-      [t.breakpoints.down("sm")]: {
+      "@media (max-width: 600px)": {
         width: "180px",
       },
     },
@@ -62,7 +60,7 @@ function Landing() {
         color: theme.tertiary,
         border: `3px solid ${theme.tertiary}`,
       },
-      [t.breakpoints.down("sm")]: {
+      "@media (max-width: 600px)": {
         display: "none",
       },
     },

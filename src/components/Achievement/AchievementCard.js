@@ -21,7 +21,7 @@ function AchievementCard({id, title, details, date, field, image}) {
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles((t) => ({
+    const useStyles = makeStyles(() => ({
         achievementCard : {
             backgroundColor:theme.primary30,
             "&:hover": {
