@@ -21,21 +21,22 @@ function ExperienceCard({id, company, jobtitle, startYear, endYear}) {
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles((t) => ({
-        experienceCard : {
-            backgroundColor:theme.primary30,
-            "&:hover": {
-                backgroundColor:theme.primary50,
-            },
-        },
-    }));
 
-    const classes = useStyles();
 
 
     return (
         <div data-aos="fade-up">
-            <div key={id} className={`experience-card ${classes.experienceCard}`}>
+            <div key={id} className="experience-card"
+                style={{
+                    backgroundColor: theme.primary30,
+                }}
+                onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = theme.primary50;
+                }}
+                onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = theme.primary30;
+                }}
+            >
                 <div className="expcard-img" style={{backgroundColor: theme.primary}}>
                     <img src={theme.type === 'light' ? expImgBlack : expImgWhite} alt="" />
                 </div>

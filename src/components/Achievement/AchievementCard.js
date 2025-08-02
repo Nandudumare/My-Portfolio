@@ -20,19 +20,20 @@ function AchievementCard({id, title, details, date, field, image}) {
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles((t) => ({
-        achievementCard : {
-            backgroundColor:theme.primary30,
-            "&:hover": {
-                backgroundColor:theme.primary50,
-            },
-        },
-    }));
 
-    const classes = useStyles();
     return (
         <div data-aos="fade-up">
-           <div key={id} className={`achievement-card ${classes.achievementCard}`}>
+           <div key={id} className="achievement-card"
+               style={{
+                   backgroundColor: theme.primary30,
+               }}
+               onMouseEnter={(e) => {
+                   e.target.style.backgroundColor = theme.primary50;
+               }}
+               onMouseLeave={(e) => {
+                   e.target.style.backgroundColor = theme.primary30;
+               }}
+           >
                <div className="achievecard-content">
                     <div className="achievecard-details1">
                         <h2 style={{color: theme.tertiary}}>{title}</h2>

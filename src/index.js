@@ -1,20 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { ThemeProvider } from '@mui/material/styles';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ThemeContextProvider from './contexts/ThemeContext'
-
-
-import "slick-carousel/slick/slick.css"; 
+import ThemeContextProvider from './contexts/ThemeContext';
+import muiTheme from './theme/muiTheme';
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <ThemeProvider theme={muiTheme}>
     <ThemeContextProvider>
       <App />
-    </ThemeContextProvider>,
-  document.getElementById('root')
+    </ThemeContextProvider>
+  </ThemeProvider>
 );
-
 
 reportWebVitals();

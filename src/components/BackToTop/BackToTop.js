@@ -28,14 +28,7 @@ function BackToTop() {
 
     window.addEventListener('scroll', toggleVisible);
 
-    const useStyles = makeStyles(() => ({
-        icon: {
-            fontSize: '3rem',
-            color: theme.tertiary,
-        },
-    }));
 
-    const classes = useStyles();
 
     return (
         <div

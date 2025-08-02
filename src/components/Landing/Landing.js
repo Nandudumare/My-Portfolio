@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Button } from "@mui/material";
 import { NavHashLink as NavLink } from "react-router-hash-link";
-import { styled } from '@mui/material/styles';
 
 import "./Landing.css";
 import { ThemeContext } from "../../contexts/ThemeContext";
@@ -18,54 +17,6 @@ import {
 
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
-
-  const useStyles = makeStyles((t) => ({
-    resumeBtn: {
-      color: theme.primary,
-      borderRadius: "30px",
-      textTransform: "inherit",
-      textDecoration: "none",
-      width: "150px",
-      fontSize: "1rem",
-      fontWeight: "500",
-      height: "50px",
-      fontFamily: "var(--primaryFont)",
-      border: `3px solid ${theme.primary}`,
-      transition: "100ms ease-out",
-      "&:hover": {
-        backgroundColor: theme.tertiary,
-        color: theme.secondary,
-        border: `3px solid ${theme.tertiary}`,
-      },
-      [t.breakpoints.down("sm")]: {
-        width: "180px",
-      },
-    },
-    contactBtn: {
-      backgroundColor: theme.primary,
-      color: theme.secondary,
-      borderRadius: "30px",
-      textTransform: "inherit",
-      textDecoration: "none",
-      width: "150px",
-      height: "50px",
-      fontSize: "1rem",
-      fontWeight: "500",
-      fontFamily: "var(--primaryFont)",
-      border: `3px solid ${theme.primary}`,
-      transition: "100ms ease-out",
-      "&:hover": {
-        backgroundColor: theme.secondary,
-        color: theme.tertiary,
-        border: `3px solid ${theme.tertiary}`,
-      },
-      [t.breakpoints.down("sm")]: {
-        display: "none",
-      },
-    },
-  }));
-
-  const classes = useStyles();
 
   return (
     <div className="landing">
@@ -148,11 +99,64 @@ function Landing() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Button style={{}}>Resume</Button>
+                  <Button 
+                    style={{
+                      color: theme.primary,
+                      borderRadius: "30px",
+                      textTransform: "inherit",
+                      textDecoration: "none",
+                      width: "150px",
+                      fontSize: "1rem",
+                      fontWeight: "500",
+                      height: "50px",
+                      fontFamily: "var(--primaryFont)",
+                      border: `3px solid ${theme.primary}`,
+                      transition: "100ms ease-out",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = theme.tertiary;
+                      e.target.style.color = theme.secondary;
+                      e.target.style.border = `3px solid ${theme.tertiary}`;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = "transparent";
+                      e.target.style.color = theme.primary;
+                      e.target.style.border = `3px solid ${theme.primary}`;
+                    }}
+                  >
+                    Resume
+                  </Button>
                 </a>
               )}
               <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
-                <Button style={{}}>Contact</Button>
+                <Button 
+                  style={{
+                    backgroundColor: theme.primary,
+                    color: theme.secondary,
+                    borderRadius: "30px",
+                    textTransform: "inherit",
+                    textDecoration: "none",
+                    width: "150px",
+                    height: "50px",
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    fontFamily: "var(--primaryFont)",
+                    border: `3px solid ${theme.primary}`,
+                    transition: "100ms ease-out",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = theme.secondary;
+                    e.target.style.color = theme.tertiary;
+                    e.target.style.border = `3px solid ${theme.tertiary}`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = theme.primary;
+                    e.target.style.color = theme.secondary;
+                    e.target.style.border = `3px solid ${theme.primary}`;
+                  }}
+                >
+                  Contact
+                </Button>
               </NavLink>
             </div>
           </div>
