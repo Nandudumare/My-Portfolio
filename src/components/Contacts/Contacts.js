@@ -4,7 +4,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 import isEmail from "validator/lib/isEmail";
 import { styled } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
 import {
   FaTwitter,
   FaLinkedinIn,
@@ -48,87 +47,7 @@ function Contacts() {
     setOpen(false);
   };
 
-  const useStyles = makeStyles((muiTheme) => ({
-    input: {
-      border: `4px solid ${theme.primary80}`,
-      backgroundColor: `${theme.secondary}`,
-      color: `${theme.tertiary}`,
-      fontFamily: "var(--primaryFont)",
-      fontWeight: 500,
-      transition: "border 0.2s ease-in-out",
-      "&:focus": {
-        border: `4px solid ${theme.primary600}`,
-      },
-    },
-    message: {
-      border: `4px solid ${theme.primary80}`,
-      backgroundColor: `${theme.secondary}`,
-      color: `${theme.tertiary}`,
-      fontFamily: "var(--primaryFont)",
-      fontWeight: 500,
-      transition: "border 0.2s ease-in-out",
-      "&:focus": {
-        border: `4px solid ${theme.primary600}`,
-      },
-    },
-    label: {
-      backgroundColor: `${theme.secondary}`,
-      color: `${theme.primary}`,
-      fontFamily: "var(--primaryFont)",
-      fontWeight: 600,
-      fontSize: "0.9rem",
-      padding: "0 5px",
-      transform: "translate(25px,50%)",
-      display: "inline-flex",
-    },
-    socialIcon: {
-      width: "45px",
-      height: "45px",
-      borderRadius: "50%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: "21px",
-      backgroundColor: theme.primary,
-      color: theme.secondary,
-      transition: "250ms ease-in-out",
-      "&:hover": {
-        transform: "scale(1.1)",
-        color: theme.secondary,
-        backgroundColor: theme.tertiary,
-      },
-    },
-    detailsIcon: {
-      backgroundColor: theme.primary,
-      color: theme.secondary,
-      borderRadius: "50%",
-      width: "45px",
-      height: "45px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: "23px",
-      transition: "250ms ease-in-out",
-      flexShrink: 0,
-      "&:hover": {
-        transform: "scale(1.1)",
-        color: theme.secondary,
-        backgroundColor: theme.tertiary,
-      },
-    },
-    submitBtn: {
-      backgroundColor: theme.primary,
-      color: theme.secondary,
-      transition: "250ms ease-in-out",
-      "&:active": {
-        transform: "scale(1.08)",
-        color: theme.secondary,
-        backgroundColor: theme.tertiary,
-      },
-    },
-  }));
 
-  const classes = useStyles();
 
   const handleContactForm = (e) => {
     e.preventDefault();
@@ -187,7 +106,21 @@ function Contacts() {
                   onChange={(e) => setName(e.target.value)}
                   type="text"
                   name="Name"
-                  className={`form-input ${classes.input}`}
+                  className="form-input"
+                  style={{
+                    border: `4px solid ${theme.primary80}`,
+                    backgroundColor: `${theme.secondary}`,
+                    color: `${theme.tertiary}`,
+                    fontFamily: "var(--primaryFont)",
+                    fontWeight: 500,
+                    transition: "border 0.2s ease-in-out",
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.border = `4px solid ${theme.primary600}`;
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.border = `4px solid ${theme.primary80}`;
+                  }}
                 />
               </div>
               <div className="input-container">
@@ -200,7 +133,21 @@ function Contacts() {
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   name="Email"
-                  className={`form-input ${classes.input}`}
+                  className="form-input"
+                  style={{
+                    border: `4px solid ${theme.primary80}`,
+                    backgroundColor: `${theme.secondary}`,
+                    color: `${theme.tertiary}`,
+                    fontFamily: "var(--primaryFont)",
+                    fontWeight: 500,
+                    transition: "border 0.2s ease-in-out",
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.border = `4px solid ${theme.primary600}`;
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.border = `4px solid ${theme.primary80}`;
+                  }}
                 />
               </div>
               <div className="input-container">
@@ -213,7 +160,21 @@ function Contacts() {
                   onChange={(e) => setMessage(e.target.value)}
                   type="text"
                   name="Message"
-                  className={`form-message ${classes.message}`}
+                  className="form-message"
+                  style={{
+                    border: `4px solid ${theme.primary80}`,
+                    backgroundColor: `${theme.secondary}`,
+                    color: `${theme.tertiary}`,
+                    fontFamily: "var(--primaryFont)",
+                    fontWeight: 500,
+                    transition: "border 0.2s ease-in-out",
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.border = `4px solid ${theme.primary600}`;
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.border = `4px solid ${theme.primary80}`;
+                  }}
                 />
               </div>
 

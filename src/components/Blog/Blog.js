@@ -1,7 +1,6 @@
 import React,{ useContext} from 'react';
 import { Link } from 'react-router-dom'
 import { styled } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
 import { HiArrowRight } from "react-icons/hi";
 
 import './Blog.css';
@@ -14,32 +13,7 @@ function Blog() {
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles((muiTheme) => ({
-        viewAllBtn : {
-            color: theme.tertiary, 
-            backgroundColor: theme.primary,
-            "&:hover": {
-                color: theme.secondary, 
-                backgroundColor: theme.primary,
-            }
-        },
-        viewArr : {
-            color: theme.tertiary, 
-            backgroundColor: theme.secondary70,
-            width: '40px',
-            height: '40px',
-            padding: '0.5rem',
-            fontSize: '1.05rem',
-            borderRadius: '50%',
-            cursor: 'pointer',
-            "&:hover": {
-                color: theme.tertiary, 
-                backgroundColor: theme.secondary,
-            }
-        },
-    }));
 
-    const classes = useStyles();
 
     return (
         <>

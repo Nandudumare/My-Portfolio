@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { styled } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
 import { FaPlay, FaCode } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,32 +15,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
         });
     }, []);
 
-    const useStyles = makeStyles((muiTheme) => ({
-        iconBtn: {
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: 40,
-            height: 40,
-            borderRadius: 50,
-            border: `2px solid ${theme.tertiary}`,
-            color: theme.tertiary,
-            transition: 'all 0.2s',
-            '&:hover': {
-                backgroundColor: theme.secondary,
-                color: theme.primary,
-                transform: 'scale(1.1)',
-                border: `2px solid ${theme.secondary}`,
-            },
-        },
-        icon: {
-            fontSize: '1.1rem',
-            transition: 'all 0.2s',
-            '&:hover': {},
-        },
-    }));
 
-    const classes = useStyles();
 
     return (
         <div data-aos="fade-up">

@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from 'react';
 import { styled } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -21,20 +20,21 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles((muiTheme) => ({
-        educationCard : {
-            backgroundColor:theme.primary30,
-            "&:hover": {
-                backgroundColor:theme.primary50,
-            },
-        },
-    }));
 
-    const classes = useStyles();
 
     return (
         <div data-aos="fade-up">
-            <div key={id} className={`education-card ${classes.educationCard}`} >
+            <div key={id} className="education-card" 
+                style={{
+                    backgroundColor: theme.primary30,
+                }}
+                onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = theme.primary50;
+                }}
+                onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = theme.primary30;
+                }}
+            >
                 <div className="educard-img" style={{backgroundColor: theme.primary}}>
                     <img src={theme.type === 'light' ? eduImgBlack : eduImgWhite} alt="" />
                 </div>
